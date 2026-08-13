@@ -1,0 +1,29 @@
+# created-by: streamlit-in-workspaces; skill-version=1.0.0
+definition_version: 2
+entities:
+  snowflake_keypair_manager:
+    type: streamlit
+    identifier:
+      database: SECURITY_OPS
+      schema: KEYPAIR_MGMT
+      name: SNOWFLAKE_KEYPAIR_MANAGER
+    title: Snowflake Keypair Manager
+    query_warehouse: COMPUTE_WH
+    compute_pool: SYSTEM_COMPUTE_POOL_CPU
+    run_mode: SpcsOnly
+    execute_as: OWNER
+    main_file: streamlit_app.py
+    artifacts:
+      - pyproject.toml
+      - streamlit_app.py
+      - .streamlit/config.toml
+      - app_pages/__init__.py
+      - app_pages/services.py
+      - app_pages/overview.py
+      - app_pages/inventory.py
+      - app_pages/register.py
+      - app_pages/rotate.py
+      - app_pages/disable.py
+      - app_pages/audit.py
+      - app_pages/admin.py
+    idle_auto_shutdown_time_seconds: 86400
